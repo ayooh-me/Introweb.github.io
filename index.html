@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="shortcut icon" href="./src/favicon/favicon.ico" type="image/x-icon">
     <link rel="icon" href="./src/favicon/favicon.ico" type="image/x-icon">
-    <title>My Website [F]</title>
+    <title>Fajar Ihsana Profile</title>
 </head>
 <body>
     <header>
         <nav class="wrapper">
-            <div class="brand">
-                <div>&copyZYNFINITY</div>
+            <div class="brand animate__animated animate__pulse animate__infinite infinite">
+                <div class="animate__animated animate__bounceInLeft">&copyZYNFINITY</div>
             </div>
-            <ul class="navigation">
+            <ul class="navigation animate__animated animate__bounceInRight" id="navigation">
                 <li><a href="#home" class="menu active">HOME</a></li>
                 <li><a href="#about" class="menu">ABOUT</a></li>
+                <li><a href="#project" class="menu">PROJECT</a></li>
                 <li><a href="#contact" class="menu">CONTACT</a></li>
                 <li>
                     <label class="switch">
@@ -27,15 +32,19 @@
                     </label>
                 </li>
             </ul>
+                <label class="switch-responsive">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
         </nav>
     </header>
     <div class="container">
         <section class="home" id="home">
             <div class="home-container">
-                <p class="title">Hello, Im Fajar Ihsana</p>
-                <p class="description">still learning programming languages</p>
+                <p class="title animate__animated animate__bounceInLeft">Hello, Im Fajar Ihsana</p>
+                <p class="description animate__animated animate__bounceInLeft animate__delay-1s">still learning programming languages</p>
                 <div>
-                    <img title= "Tekan untuk mendengar ara ara:v "src="./src/image/loli.png" alt="" class="img-home" onclick="playAudio()">
+                    <img title= "Tekan untuk mendengar ara ara:v "src="./src/image/loli.png" alt="" class="img-home animate__animated animate__bounceInRight" onclick="playAudio()">
                 </div>
             </div>
         </section>
@@ -55,6 +64,12 @@
                         <a href="https://www.instagram.com/ihsanafajar/" target="_blank" class="about__social-icon"><i class='bx bxl-instagram' ></i></a>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section class="project" id="project">
+            <h2 class="section-title">Project</h2>
+            <div class="project-container">
+                <div class="project-wrapper"></div>
             </div>
         </section>
         <section class="contact" id="contact">
@@ -78,6 +93,12 @@
         <source src="./src/audio/ara.mp3" type="audio/mpeg">
         Browsermu tidak mendukung tag audio, upgrade donk!
     </audio>
+    <script 
+        src="https://code.jquery.com/jquery-3.6.3.js"
+        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
