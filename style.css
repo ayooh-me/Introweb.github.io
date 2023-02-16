@@ -178,10 +178,10 @@ header {
 }
 .about-container {
     max-width: 70%;
-    height: 30vh;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 100px;
+    margin-top: 40px;
     display: grid;
     grid-template-columns: 35% 35%;
     justify-content: center;
@@ -227,8 +227,10 @@ header {
     position: relative;
 }
 .contact-container {
+    display: flex;
+    flex-direction: column;
     max-width: 40%;
-    height: 30vh;
+    height: 300px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
@@ -242,29 +244,29 @@ header {
     padding: 5px;
     position: relative;
 }
-
 .project-container {
+    display: flex;
     max-width: 84%;
-    color: #222;
     height: auto;
+    color: #222;
     margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
 }
 .project-wrapper {
-    position: relative;
     display: grid;
     grid-template-columns: 28% 28% 28%;
     /* grid-template-columns: auto auto auto; */
     justify-content: center;
     width: 100%;
+    height: auto;
     flex-wrap: wrap;
     gap: 20px;
 }
 .list {
     position: relative;
     width: 92%;
-    height: 25vh;
+    height: 250px;
     border-radius: 8px;
     padding: 15px;
     background-color: #00ace6;
@@ -379,7 +381,7 @@ input:checked+.slider:before {
     .about-container {
         grid-template-columns: repeat(2, 1fr);
         max-width: 80%;
-        height: 45vh;
+        height: auto;
         margin-top: 40px;
         display: flex;
         flex-direction: column;
@@ -407,9 +409,8 @@ input:checked+.slider:before {
         gap: 20px;
     }
     .list {
-        position: relative;
         width: 92%;
-        height: 25vh;
+        height: 250px;
         border-radius: 8px;
         padding: 15px;
         background-color: #00ace6;
@@ -424,7 +425,13 @@ input:checked+.slider:before {
     }
     
 }
-@media screen and (max-width: 604px) {
+@media screen and (max-width: 710px) {
+    .switch {
+        display: none;
+    }
+    .navigation>li:nth-child(5) {
+        display: none;
+    }
     .navigation {
         background-color: var(--nav-bg-color2);
         width: 100%;
@@ -451,16 +458,13 @@ input:checked+.slider:before {
         color: var(--active-color);
         transition: none;
     }
-    .switch {
-        display: none;
-    }
     .switch-responsive {
         position: relative;
         display: inline-block;
         width: 50px;
         height: 30px;
     }
-    .switch-responsive input {
+    .switch-responsive input, .switch input {
         opacity: 0;
         width: 0;
         height: 0;
