@@ -29,7 +29,7 @@ function playAudio(){
 function getRepositories(){
     var ul = $('div.project-wrapper');
     var count = 15; // number of images
-    axios.get('https://api.github.com/users/Zynfinity/subscriptions').then(async ({data}) => {
+    axios.get('https://api.github.com/users/Rossy-Chan/subscriptions').then(async ({data}) => {
         const filter = data.filter(s => s.language != null)
         data = filter
         for(var i = 0; i < data.length; i++) {
